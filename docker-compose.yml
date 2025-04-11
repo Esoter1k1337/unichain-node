@@ -1,24 +1,7 @@
 volumes:
   shared:
 
-services:
-  execution-client:
-    image: us-docker.pkg.dev/oplabs-tools-artifacts/images/op-geth:v1.101503.2
-    env_file:
-      - .env
-      # select your network here:
-#     - .env.sepolia
-#     - .env.mainnet
-    ports:
-      - 30303:30303/udp
-      - 30303:30303/tcp
-      - 8545:8545/tcp
-      - 8546:8546/tcp
-    volumes:
-      - ${HOST_DATA_DIR}:/data
-      - shared:/shared
-      - ./chainconfig:/chainconfig
-      - ./op-geth-entrypoint.sh:/entrypoint.sh
+services
     healthcheck:
       start_interval: 5s
       start_period: 240s

@@ -36,9 +36,3 @@ curl -d '{"id":1,"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["late
 5. To stop your node, run:
 ```
 docker compose down
-```
-
-#### Persisting Data
-
-By default, the data directory is stored in `${PROJECT_ROOT}/geth-data`. You can override this by modifying the value of
-`HOST_DATA_DIR` variable in the [`.env`](./.env) file.

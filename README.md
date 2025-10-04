@@ -31,8 +31,6 @@ docker compose up -d
 ```
 curl -d '{"id":1,"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["latest",false]}' \
   -H "Content-Type: application/json" http://localhost:8545
-```
 
-5. To stop your node, run:
 ```
 docker compose down
